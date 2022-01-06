@@ -1,0 +1,6 @@
+*.zip
+.idea/
+myvenv/
+sandbox.py
+db.json
+__pycache__/
