@@ -4,3 +4,4 @@ myvenv/
 sandbox.py
 db.json
 __pycache__/
+tournament.json

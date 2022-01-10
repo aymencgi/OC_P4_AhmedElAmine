@@ -18,7 +18,7 @@ def save_players():
 
         serialized_players.append(serialized_player)
 
-    db = TinyDB("db.json")
+    db = TinyDB('db.json', indent=4, separators=(',', ': '))
     players_table = db.table("players")
     players_table.truncate()
     players_table.insert_multiple(serialized_players)

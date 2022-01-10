@@ -3,6 +3,7 @@ class Player:
     players_list = []
     id = 1
 
+
     def __init__(self, player_id, first_name, last_name, date_of_birth, gender, rank=0):
         self.player_id = player_id
         self.first_name = first_name
@@ -13,6 +14,6 @@ class Player:
         Player.players_list.append(self)
         Player.id += 1
 
-    def __str__(self):
+    def __repr__(self):
         return f"id: {self.player_id} - Player {self.first_name} {self.last_name} ({self.gender}), ranked: {self.rank}"
 
