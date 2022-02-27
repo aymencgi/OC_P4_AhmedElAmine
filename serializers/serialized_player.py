@@ -1,6 +1,5 @@
 from tinydb import TinyDB,Query
 from models.player import Player
-import json
 
 
 def save_players():

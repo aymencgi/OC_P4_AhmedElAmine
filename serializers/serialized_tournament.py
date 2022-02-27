@@ -1,5 +1,7 @@
 from tinydb import TinyDB,Query
 from models.tournament import Tournament
+from models.round import Round
+from serialized_round import serialize_rounds, load_round
 
 
 def save_tournament():
@@ -12,12 +14,16 @@ def save_tournament():
             "start_date": tournament.start_date,
             "end_date": tournament.end_date,
             "number_rounds": tournament.number_rounds,
-            "rounds": tournament.rounds,
+            "rounds": serialize_rounds(tournament.rounds),
             "time_control": tournament.time_control,
             "description": tournament.description,
+            "number_players": tournament.number_players,
+            "players": tournament.players,
         }
 
         serialized_tournaments.append(serialized_tournament)
+
+
 
     db = TinyDB("db.json", indent=4, separators=(',', ': '))
     tournament_table = db.table("tournaments")
@@ -30,6 +36,12 @@ def load_tournaments():
     tournament_table = db.table("tournaments")
     serialized_tournaments = tournament_table.all()
     for tournament in serialized_tournaments:
-        Tournament(**tournament)
+        t = Tournament(**tournament)
+
+        rounds = []
+        for r in t.rounds:
+            rounds.append(load_round(r))
+
+        t.rounds = rounds
 
 
