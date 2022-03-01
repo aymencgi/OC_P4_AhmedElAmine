@@ -1,0 +1,91 @@
+{
+    "players": {
+        "1": {
+            "player_id": 1,
+            "first_name": "Aymen",
+            "last_name": "cgi",
+            "date_of_birth": "18-01-1999",
+            "gender": "male",
+            "rank": 600
+        },
+        "2": {
+            "player_id": 2,
+            "first_name": "lucy",
+            "last_name": "sky",
+            "date_of_birth": "10-08-1998",
+            "gender": "female",
+            "rank": 500
+        },
+        "3": {
+            "player_id": 3,
+            "first_name": "zoro",
+            "last_name": "roronoa",
+            "date_of_birth": "28-05-1999",
+            "gender": "male",
+            "rank": 1200
+        },
+        "4": {
+            "player_id": 4,
+            "first_name": "a",
+            "last_name": "a",
+            "date_of_birth": "ea",
+            "gender": "male",
+            "rank": 300
+        },
+        "5": {
+            "player_id": 5,
+            "first_name": "aymen",
+            "last_name": "aymen",
+            "date_of_birth": "25-1-1999",
+            "gender": "M",
+            "rank": 200
+        },
+        "6": {
+            "player_id": 6,
+            "first_name": "b",
+            "last_name": "c",
+            "date_of_birth": "15-02-1990",
+            "gender": "M",
+            "rank": 300
+        }
+    },
+    "tournaments": {
+        "1": {
+            "tournament_id": 1,
+            "name": "gold",
+            "place": "paris",
+            "start_date": "20-10-2022",
+            "end_date": null,
+            "number_rounds": 4,
+            "rounds": [],
+            "time_control": "Rapid",
+            "description": "none",
+            "number_players": 4,
+            "players": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "2": {
+            "tournament_id": 2,
+            "name": "silver",
+            "place": "lyon",
+            "start_date": "10-10-2022",
+            "end_date": null,
+            "number_rounds": 4,
+            "rounds": [],
+            "time_control": "Rapid",
+            "description": "none",
+            "number_players": 5,
+            "players": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    }
+}

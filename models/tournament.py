@@ -17,5 +17,17 @@ class Tournament:
         Tournament.tournament_list.append(self)
         Tournament.id += 1
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.name}, {self.place}"
+
+    @staticmethod
+    def all_active_ids():
+        return [item.tournament_id for item in Tournament.tournament_list if item.end_date is None]
+
+    @staticmethod
+    def find_tournament(tournament_id):
+        for tournament in Tournament.tournament_list:
+            if tournament.tournament_id == tournament_id:
+                return tournament
+
+        raise ValueError("Not existing id")
