@@ -1,4 +1,4 @@
-from serialized_match import serialize_matches, load_match
+from serializers.serialized_match import serialize_matches, load_match
 from models.round import Round
 
 

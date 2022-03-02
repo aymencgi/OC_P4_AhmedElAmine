@@ -1,7 +1,7 @@
 from datetime import datetime
-from views import MenuView
+# from views import MenuView
 from models.player import Player
-from models.serialized_player import save_players
+from serializers.serialized_player import save_players
 
 
 def players_list():

@@ -1,7 +1,7 @@
-from tinydb import TinyDB,Query
+from tinydb import TinyDB, Query
 from models.tournament import Tournament
 from models.round import Round
-from serialized_round import serialize_rounds, load_round
+from serializers.serialized_round import serialize_rounds, load_round
 
 
 def save_tournament():
